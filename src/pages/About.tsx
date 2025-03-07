@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Check, Users, MapPin, Star } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
@@ -30,7 +29,7 @@ const About = () => {
     },
     {
       title: 'Customer-Centric Approach',
-      description: 'We put our clients' needs first, delivering solutions tailored to their requirements.',
+      description: "We put our clients' needs first, delivering solutions tailored to their requirements.",
       icon: <Check className="w-6 h-6" />,
     },
   ];

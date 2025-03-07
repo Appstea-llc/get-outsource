@@ -13,7 +13,7 @@ interface ContactFormProps {
 const ContactForm = ({ 
   variant = 'light', 
   title = 'Get in Touch', 
-  subtitle = 'We'd love to hear from you. Fill out the form below to start the conversation.' 
+  subtitle = "We'd love to hear from you. Fill out the form below to start the conversation."
 }: ContactFormProps) => {
   const [formData, setFormData] = useState({
     name: '',
