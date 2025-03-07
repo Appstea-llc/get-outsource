@@ -45,7 +45,7 @@ const blogPosts = [
   },
   {
     id: 'translation-localization',
-    title: 'Translation vs. Localization: What's the Difference?',
+    title: "Translation vs. Localization: What's the Difference?",
     excerpt: 'Understand the critical differences between translation and localization and why both matter for global business success.',
     category: 'Translation',
     date: 'August 5, 2023',

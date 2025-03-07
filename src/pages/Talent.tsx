@@ -1,6 +1,5 @@
-
 import { useEffect } from 'react';
-import { ArrowRight, Code, Paintbrush, Globe, PenTool, Users, BarChart } from 'lucide-react';
+import { ArrowRight, Code, Paintbrush, Globe, PenTool, Users, BarChart, Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -100,7 +99,7 @@ const Talent = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {[
-                { step: '01', title: 'Screening', description: 'We carefully screen each applicant's skills, experience, and background.' },
+                { step: '01', title: 'Screening', description: "We carefully screen each applicant's skills, experience, and background." },
                 { step: '02', title: 'Testing', description: 'Candidates complete practical assessments to verify their technical proficiency.' },
                 { step: '03', title: 'Interviews', description: 'Multiple interview rounds evaluate communication, problem-solving, and culture fit.' },
                 { step: '04', title: 'Continuous Evaluation', description: 'Ongoing performance reviews ensure our talent maintains excellence.' },
@@ -205,7 +204,7 @@ const Talent = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-go-neutral-900">Quality Education</h3>
-                        <p className="text-go-neutral-600">Access to professionals educated at Europe's top technical universities and institutions.</p>
+                        <p className="text-go-neutral-600">Access to professionals educated at Europe{"'"}s top technical universities and institutions.</p>
                       </div>
                     </li>
                     <li className="flex">
@@ -276,6 +275,3 @@ const Talent = () => {
 };
 
 export default Talent;
-
-// Importing Check icon to avoid build error
-import { Check } from 'lucide-react';
