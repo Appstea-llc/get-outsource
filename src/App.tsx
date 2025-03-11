@@ -13,6 +13,13 @@ import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
+// Service Pages
+import Development from "./pages/services/Development";
+import Marketing from "./pages/services/Marketing";
+import Translation from "./pages/services/Translation";
+import Design from "./pages/services/Design";
+import Consulting from "./pages/services/Consulting";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -29,6 +36,14 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
+          
+          {/* Service Routes */}
+          <Route path="/services/development" element={<Development />} />
+          <Route path="/services/marketing" element={<Marketing />} />
+          <Route path="/services/translation" element={<Translation />} />
+          <Route path="/services/design" element={<Design />} />
+          <Route path="/services/consulting" element={<Consulting />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

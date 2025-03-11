@@ -84,9 +84,9 @@ const FeaturedWork = () => {
                   <div className="relative">
                     {/* Placeholder for project image */}
                     <div className="aspect-video bg-go-neutral-200 relative overflow-hidden group-hover:scale-105 transition-transform duration-700 ease-out-expo">
-                      <div className="absolute inset-0 bg-gradient-to-br from-go-blue-600/20 to-go-blue-800/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-go-blue-600/20 to-go-blue-800/40 opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white transform translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out-expo">
+                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
                       <div className="text-sm uppercase tracking-wider font-semibold mb-2 text-go-blue-300">
                         {project.category}
                       </div>
