@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { ArrowRight, Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -6,51 +5,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import ContactForm from '@/components/ui/ContactForm';
 import FadeIn from '@/components/animations/FadeIn';
-
-const openPositions = [
-  {
-    id: 'senior-react-developer',
-    title: 'Senior React Developer',
-    location: 'Prague / Remote',
-    type: 'Full-time',
-    department: 'Development',
-  },
-  {
-    id: 'ux-designer',
-    title: 'UX Designer',
-    location: 'Warsaw / Remote',
-    type: 'Full-time',
-    department: 'Design',
-  },
-  {
-    id: 'project-manager',
-    title: 'Project Manager',
-    location: 'Berlin / Remote',
-    type: 'Full-time',
-    department: 'Operations',
-  },
-  {
-    id: 'content-strategist',
-    title: 'Content Strategist',
-    location: 'Remote (EU)',
-    type: 'Full-time',
-    department: 'Marketing',
-  },
-  {
-    id: 'english-german-translator',
-    title: 'English-German Translator',
-    location: 'Remote (EU)',
-    type: 'Contract / Part-time',
-    department: 'Translation',
-  },
-  {
-    id: 'business-development',
-    title: 'Business Development Representative',
-    location: 'Prague / Remote',
-    type: 'Full-time',
-    department: 'Sales',
-  },
-];
+import { jobOpenings } from '@/data/jobOpenings';
 
 const benefits = [
   {
@@ -220,7 +175,7 @@ const Careers = () => {
             </FadeIn>
 
             <div className="space-y-6">
-              {openPositions.map((position, index) => (
+              {jobOpenings.map((position, index) => (
                 <FadeIn key={position.id} direction="up" delay={index * 100}>
                   <Link to={`/careers/${position.id}`} className="group block">
                     <div className="bg-go-neutral-50 p-6 rounded-xl border border-go-neutral-100 hover:border-go-blue-200 hover:bg-go-blue-50/30 transition-all duration-300">

@@ -12,6 +12,7 @@ import Talent from "./pages/Talent";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/blog/BlogPost";
 import Careers from "./pages/Careers";
+import JobDetail from "./pages/careers/JobDetail";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:postId" element={<BlogPost />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/careers/:jobId" element={<JobDetail />} />
           <Route path="/contact" element={<Contact />} />
           
           {/* Service Routes */}
