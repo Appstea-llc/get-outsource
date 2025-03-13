@@ -72,7 +72,7 @@ export const jobOpenings: JobOpening[] = [
       'Ability to solve problems creatively and effectively',
       'Up-to-date knowledge of design trends, techniques, and technologies',
       'Excellent communication skills with a good command of English',
-      'Bachelor's degree in Design, Human-Computer Interaction, or related field'
+      'Bachelor\'s degree in Design, Human-Computer Interaction, or related field'
     ],
     benefits: [
       'Remote-First Culture',
