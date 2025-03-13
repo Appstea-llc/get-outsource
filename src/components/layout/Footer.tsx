@@ -76,17 +76,17 @@ const Footer = () => {
               <h3 className="text-xl font-semibold mb-6">Services</h3>
               <ul className="space-y-4">
                 <li>
-                  <Link to="/services/web-development" className="text-go-neutral-300 hover:text-go-blue-400 transition-colors duration-200">
+                  <Link to="/services/development" className="text-go-neutral-300 hover:text-go-blue-400 transition-colors duration-200">
                     Web Development
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/mobile-development" className="text-go-neutral-300 hover:text-go-blue-400 transition-colors duration-200">
+                  <Link to="/services/development" className="text-go-neutral-300 hover:text-go-blue-400 transition-colors duration-200">
                     Mobile Development
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services/digital-marketing" className="text-go-neutral-300 hover:text-go-blue-400 transition-colors duration-200">
+                  <Link to="/services/marketing" className="text-go-neutral-300 hover:text-go-blue-400 transition-colors duration-200">
                     Digital Marketing
                   </Link>
                 </li>
@@ -137,15 +137,16 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} GetOutsource. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-go-neutral-400 hover:text-go-blue-400 transition-colors duration-200 text-sm">
+              {/* Removing links to non-existent pages */}
+              <span className="text-go-neutral-400 text-sm">
                 Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-go-neutral-400 hover:text-go-blue-400 transition-colors duration-200 text-sm">
+              </span>
+              <span className="text-go-neutral-400 text-sm">
                 Terms of Service
-              </Link>
-              <Link to="/cookies" className="text-go-neutral-400 hover:text-go-blue-400 transition-colors duration-200 text-sm">
+              </span>
+              <span className="text-go-neutral-400 text-sm">
                 Cookie Policy
-              </Link>
+              </span>
             </div>
           </div>
         </div>
