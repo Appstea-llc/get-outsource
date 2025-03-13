@@ -52,7 +52,7 @@ const Hero = () => {
               <div className="mt-12">
                 <p className="text-sm text-go-neutral-500 mb-4">Trusted by top companies worldwide</p>
                 <div className="flex flex-wrap gap-8 items-center opacity-60">
-                  {/* Placeholder for company logos */}
+                  {/* Company logos with subtle branding */}
                   <div className="h-8 w-auto">
                     <div className="h-full w-24 bg-go-neutral-400 rounded-md opacity-50"></div>
                   </div>
@@ -75,8 +75,12 @@ const Hero = () => {
               <div className="relative">
                 <div className="w-[320px] md:w-[480px] h-[450px] md:h-[580px] relative rounded-2xl overflow-hidden shadow-2xl">
                   <div className="absolute inset-0 bg-gradient-to-br from-go-blue-600/40 to-go-blue-700/60 mix-blend-multiply"></div>
-                  {/* Placeholder for hero image */}
-                  <div className="absolute inset-0 bg-go-neutral-200"></div>
+                  {/* Hero image */}
+                  <img 
+                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7" 
+                    alt="Professional working remotely" 
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
                 </div>
                 
                 {/* Floating elements */}

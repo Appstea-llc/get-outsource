@@ -107,7 +107,7 @@ const Portfolio = () => {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
               {[...Array(6)].map((_, i) => (
                 <FadeIn key={i} direction="up" delay={i * 100}>
-                  <div className="h-12 bg-go-neutral-200 rounded-md mx-auto w-32"></div>
+                  <div className="h-12 bg-go-neutral-200 rounded-md mx-auto w-32 opacity-60"></div>
                 </FadeIn>
               ))}
             </div>

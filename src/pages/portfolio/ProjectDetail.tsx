@@ -84,8 +84,12 @@ const ProjectDetail = () => {
               <div className="lg:col-span-2">
                 <FadeIn direction="up">
                   <div className="aspect-video bg-go-neutral-200 rounded-xl overflow-hidden mb-8">
-                    {/* Placeholder for project image */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-go-blue-600/20 to-go-blue-800/40"></div>
+                    {/* Project featured image */}
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   
                   <div className="prose prose-lg max-w-none">
@@ -218,7 +222,12 @@ const ProjectDetail = () => {
                     <Link to={`/portfolio/${relatedProject.id}`} className="group block">
                       <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
                         <div className="aspect-video bg-go-neutral-200 relative overflow-hidden">
-                          {/* Placeholder for project image */}
+                          {/* Related project image */}
+                          <img
+                            src={relatedProject.image}
+                            alt={relatedProject.title}
+                            className="w-full h-full object-cover"
+                          />
                           <div className="absolute inset-0 bg-gradient-to-br from-go-blue-600/20 to-go-blue-800/40 opacity-60"></div>
                         </div>
                         <div className="p-6">
