@@ -6,51 +6,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import ContactForm from '@/components/ui/ContactForm';
 import FadeIn from '@/components/animations/FadeIn';
-
-const projects = [
-  {
-    id: 'e-commerce-platform',
-    title: 'E-commerce Platform',
-    category: 'Web Development',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-    description: 'A comprehensive e-commerce solution for a European fashion retailer with multi-language support and integrated payment processing.',
-  },
-  {
-    id: 'saas-dashboard',
-    title: 'SaaS Dashboard',
-    category: 'UI/UX Design & Development',
-    tags: ['React', 'TypeScript', 'Tailwind CSS', 'Data Visualization'],
-    description: 'An intuitive dashboard interface for a SaaS project management tool used by teams across 15+ countries.',
-  },
-  {
-    id: 'multilingual-mobile-app',
-    title: 'Multilingual Mobile App',
-    category: 'Mobile Development & Translation',
-    tags: ['React Native', 'i18n', 'Firebase', 'Content Translation'],
-    description: 'A travel companion app available in 8 European languages with offline capabilities and local recommendations.',
-  },
-  {
-    id: 'marketing-campaign',
-    title: 'Marketing Campaign',
-    category: 'Digital Marketing',
-    tags: ['SEO', 'Content Strategy', 'Analytics', 'Email Marketing'],
-    description: 'A full-scale marketing campaign for a software product launch targeting the German, French, and Spanish markets.',
-  },
-  {
-    id: 'corporate-website-localization',
-    title: 'Corporate Website Localization',
-    category: 'Translation & Development',
-    tags: ['Website Translation', 'SEO', 'Content Adaptation', 'CMS Integration'],
-    description: 'Complete localization of a corporate website into 12 European languages with SEO optimization for each market.',
-  },
-  {
-    id: 'fintech-mobile-application',
-    title: 'Fintech Mobile Application',
-    category: 'App Development',
-    tags: ['Flutter', 'Financial APIs', 'Security', 'UX Design'],
-    description: 'A secure mobile banking application with advanced features and compliance with European financial regulations.',
-  },
-];
+import { projects } from '@/data/projects';
 
 const Portfolio = () => {
   useEffect(() => {
@@ -90,8 +46,14 @@ const Portfolio = () => {
                   <Link to={`/portfolio/${project.id}`} className="group block h-full">
                     <div className="bg-go-neutral-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 h-full flex flex-col">
                       <div className="aspect-video bg-go-neutral-200 relative overflow-hidden">
-                        {/* Placeholder for project image */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-go-blue-600/20 to-go-blue-800/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        {project.image && (
+                          <img 
+                            src={project.image} 
+                            alt={project.title} 
+                            className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out-expo"
+                          />
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-br from-go-blue-600/20 to-go-blue-800/40 opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
                       </div>
                       <div className="p-6 flex flex-col flex-grow">
                         <div className="text-sm text-go-blue-600 font-medium mb-2">
@@ -104,11 +66,16 @@ const Portfolio = () => {
                           {project.description}
                         </p>
                         <div className="flex flex-wrap gap-2 mb-4">
-                          {project.tags.map((tag, i) => (
+                          {project.tags.slice(0, 3).map((tag, i) => (
                             <span key={i} className="inline-block px-3 py-1 bg-go-neutral-100 text-go-neutral-700 text-xs rounded-full">
                               {tag}
                             </span>
                           ))}
+                          {project.tags.length > 3 && (
+                            <span className="inline-block px-3 py-1 bg-go-neutral-100 text-go-neutral-700 text-xs rounded-full">
+                              +{project.tags.length - 3} more
+                            </span>
+                          )}
                         </div>
                         <div className="flex items-center text-go-blue-600 font-medium">
                           View Case Study

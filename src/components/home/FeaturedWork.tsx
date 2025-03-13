@@ -1,41 +1,11 @@
 
 import { Link } from 'react-router-dom';
 import FadeIn from '../animations/FadeIn';
-
-interface Project {
-  title: string;
-  category: string;
-  image: string;
-  link: string;
-}
+import { projects } from '@/data/projects';
 
 const FeaturedWork = () => {
-  const projects: Project[] = [
-    {
-      title: 'E-commerce Platform',
-      category: 'Web Development',
-      image: '',
-      link: '/portfolio/e-commerce-platform',
-    },
-    {
-      title: 'SaaS Dashboard',
-      category: 'UI/UX Design & Development',
-      image: '',
-      link: '/portfolio/saas-dashboard',
-    },
-    {
-      title: 'Multilingual Mobile App',
-      category: 'Mobile Development & Translation',
-      image: '',
-      link: '/portfolio/multilingual-mobile-app',
-    },
-    {
-      title: 'Marketing Campaign',
-      category: 'Digital Marketing',
-      image: '',
-      link: '/portfolio/marketing-campaign',
-    },
-  ];
+  // Get first 4 projects from our centralized projects data
+  const featuredProjects = projects.slice(0, 4);
 
   return (
     <section className="py-24 bg-white">
@@ -77,15 +47,24 @@ const FeaturedWork = () => {
         </FadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <FadeIn key={index} direction="up" delay={index * 100}>
-              <Link to={project.link} className="group block">
+              <Link to={`/portfolio/${project.id}`} className="group block">
                 <div className="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-500">
                   <div className="relative">
-                    {/* Placeholder for project image */}
-                    <div className="aspect-video bg-go-neutral-200 relative overflow-hidden group-hover:scale-105 transition-transform duration-700 ease-out-expo">
+                    {/* Project image with overlay */}
+                    <div className="aspect-video bg-go-neutral-200 relative overflow-hidden">
+                      {project.image && (
+                        <img 
+                          src={project.image} 
+                          alt={project.title} 
+                          className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out-expo"
+                        />
+                      )}
                       <div className="absolute inset-0 bg-gradient-to-br from-go-blue-600/20 to-go-blue-800/40 opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
+                    
+                    {/* Project info - now always visible */}
                     <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
                       <div className="text-sm uppercase tracking-wider font-semibold mb-2 text-go-blue-300">
                         {project.category}
