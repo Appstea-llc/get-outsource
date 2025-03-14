@@ -51,8 +51,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-go-neutral-900">Our Location</h3>
                         <p className="text-go-neutral-600">
-                          123 Business Ave, Prague,<br />
-                          Czech Republic, EU
+                          Samgori district, Akaki Phagava str., 27B, Tbilisi, Georgia, 0182
                         </p>
                       </div>
                     </div>
@@ -65,7 +64,7 @@ const Contact = () => {
                         <h3 className="font-semibold text-go-neutral-900">Phone Number</h3>
                         <p className="text-go-neutral-600">
                           <a href="tel:+420123456789" className="hover:text-go-blue-600 transition-colors duration-300">
-                            +420 123 456 789
+                            +995 591 92 38 24
                           </a>
                         </p>
                       </div>

@@ -111,13 +111,13 @@ const Footer = () => {
                 <li className="flex items-start">
                   <MapPin size={20} className="text-go-blue-400 mr-3 mt-1 flex-shrink-0" />
                   <span className="text-go-neutral-300">
-                    123 Business Ave, Prague,<br />Czech Republic, EU
+                    Samgori district, Akaki Phagava str., 27B, Tbilisi, Georgia, 0182
                   </span>
                 </li>
                 <li className="flex items-center">
                   <Phone size={20} className="text-go-blue-400 mr-3 flex-shrink-0" />
                   <a href="tel:+420123456789" className="text-go-neutral-300 hover:text-go-blue-400 transition-colors duration-200">
-                    +420 123 456 789
+                    +995 591 92 38 24
                   </a>
                 </li>
                 <li className="flex items-center">
